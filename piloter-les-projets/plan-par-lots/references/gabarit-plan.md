@@ -19,10 +19,16 @@
 - [Phase 0 — [nom]](#phase-0)
   - [Lot 0.1 — [nom]](#lot-0-1)
   - [Lot 0.2 — [nom]](#lot-0-2)
+  - [Clôture de la phase 0](#cloture-0)
 - [Phase 1 — [nom]](#phase-1)
   - [Lot 1.1 — [nom]](#lot-1-1)
   - [Lot 1.2 — [nom]](#lot-1-2)
-  - [Test réel de la phase 1](#test-1)
+  - [Clôture de la phase 1](#cloture-1)
+<!-- Dès qu'une phase est clôturée, le sommaire devient :
+- [Phases non clôturées](#phases-ouvertes)
+  - [Phase 1 — [nom]](#phase-1) …
+- [Phases clôturées](#phases-cloturees)
+  - [Phase 0 — [nom]](#phase-0) — clôturée le AAAA-MM-JJ -->
 - [Actions de [prénom]](#actions)
 - [Points à confirmer en cours de route](#a-confirmer)
 - [Décidé automatiquement](#decide)
@@ -95,6 +101,20 @@ Décisions de [prénom], le AAAA-MM-JJ.
 
 ---
 
+<!-- Tant qu'aucune phase n'est clôturée, les phases se suivent ici, sans chapitre.
+Dès qu'une phase est clôturée, couper en deux chapitres, dans cet ordre :
+
+<a id="phases-ouvertes"></a>
+## Phases non clôturées
+  (la phase en cours, puis les phases à venir)
+
+<a id="phases-cloturees"></a>
+## Phases clôturées
+  (les phases finies, déplacées telles quelles, ancres inchangées)
+
+Une phase clôturée porte, sous son en-tête :
+**Clôturée (AAAA-MM-JJ)** : [tests globaux lancés et leur résultat]. -->
+
 <a id="phase-0"></a>
 ## Phase 0 — [nom court]
 
@@ -111,6 +131,7 @@ Décisions de [prénom], le AAAA-MM-JJ.
   - [geste concret]
   - **Toi** : [geste réservé à l'utilisateur, s'il y en a un].
 - **Dépend de** : rien.
+- **Tests du lot** : [tests unitaires qui prouvent le lot].
 - **Résultat attendu** : [ce qu'on observe].
 
 <a id="lot-0-2"></a>
@@ -121,12 +142,19 @@ Décisions de [prénom], le AAAA-MM-JJ.
   - [geste concret]
   - [geste concret]
 - **Dépend de** : 0.1.
+- **Tests du lot** : [tests unitaires].
 - **Résultat attendu** : [ce qu'on observe].
 - **Décision nécessaire**
   - **Pourquoi la question se pose** : [constat].
   - **A — [option]** → conséquence : […]
   - **B — [option]** → conséquence : […]
   - **Avis technique** : [factuel, court].
+
+<a id="cloture-0"></a>
+### Clôture de la phase 0
+
+- **Tests globaux** : [toute la suite de tests, le build, et le parcours réel si la phase touche le réel].
+- **Résultat attendu** : tout est vert. La phase 1 ne s'ouvre qu'après.
 
 ---
 
@@ -147,6 +175,7 @@ Décisions de [prénom], le AAAA-MM-JJ.
   - [geste concret]
   - [geste concret]
 - **Dépend de** : 0.2.
+- **Tests du lot** : [tests unitaires].
 - **Résultat attendu** : [ce qu'on observe].
 
 <a id="lot-1-2"></a>
@@ -159,16 +188,19 @@ Décisions de [prénom], le AAAA-MM-JJ.
   - États vide, chargement et erreur dessinés.
   - Vérifié dans le navigateur, largeur ordinateur et téléphone.
 - **Dépend de** : 1.1.
+- **Tests du lot** : [tests unitaires du composant et de la route].
 - **Résultat attendu** : [ce que l'utilisateur voit et peut faire].
 
-<a id="test-1"></a>
-### Test réel de la phase 1
+<a id="cloture-1"></a>
+### Clôture de la phase 1
 
-- **À faire** : [le parcours complet, sur l'instance réelle, avec de vraies données].
-- **Résultat attendu** : [ce qui prouve que la phase marche pour de bon].
+- **Tests globaux** : [toute la suite de tests, le build].
+- **Test réel** : [le parcours complet, sur l'instance réelle, avec de vraies données].
+- **Résultat attendu** : tout est vert ; [ce qui prouve que la phase marche pour de bon].
 
 <!-- Quand un lot est fini, ajouter à ce lot :
-- **Fait (AAAA-MM-JJ)** : [ce qui a été fait, ce qui diffère du prévu, la preuve].
+- **Fait (AAAA-MM-JJ)** : [ce qui a été fait, ce qui diffère du prévu, la preuve, tests unitaires verts].
+Un lot trop gros se découpe en sous-lots : « Lot 1.2a », « 1.2b » (ancre lot-1-2a), faits dans l'ordre.
 Une phase ajoutée plus tard s'appelle « 1 bis », « 1C »… : on ne renumérote jamais. -->
 
 ---
@@ -199,7 +231,7 @@ Ce que Claude ne fait pas à ta place (réglages système, mots de passe, clés,
 
 | Sujet | Choix | Pourquoi |
 |---|---|---|
-| Ordre des phases | 0 → 1 → 2 ; [ce qui peut avancer en parallèle] | Chaque phase s'appuie sur la précédente |
+| Ordre des phases | 0 → 1 → 2, une phase ouverte à la fois, lots et sous-lots dans l'ordre | Chaque phase s'appuie sur la précédente et se clôture par des tests globaux |
 | [sujet] | [choix] | [raison en une ligne] |
 
 ---

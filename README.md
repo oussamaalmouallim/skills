@@ -1,6 +1,6 @@
 # StackLLM Skills
 
-> Dépôt privé · v0.8.0 · aucune Skill n'est encore commercialisée
+> Dépôt privé · v0.8.1 · aucune Skill n'est encore commercialisée
 
 Ce dépôt contient **18 skills vivantes** pour Claude Code, rangées en **6 volets**.
 Un volet = un besoin. Une skill = un dossier avec un `SKILL.md`.
@@ -73,7 +73,7 @@ règle d'écriture, rien à tester.
 |---|---|---|
 | `map-projet-reponse` | La map d'avancement d'un projet ou d'une orga GitHub, **affichée dans la réponse**. Réglage 1, 2 ou 3 colonnes. Aucun fichier créé. | A |
 | `map-projet` | La même map **en fichiers** : 2 PNG et 2 HTML, à garder, imprimer ou envoyer. Le PNG demande Chrome ou Edge. | A |
-| `plan-par-lots` | Le plan de travail en phases et en lots, dans un fichier Markdown à structure fixe : but, décisions, constats, lots, actions à faire soi-même. Mis à jour à la fin de chaque lot. | B |
+| `plan-par-lots` | Le plan de travail en phases et en lots, dans un fichier Markdown à structure fixe : but, décisions, constats, lots, actions à faire soi-même. Exécuté phase par phase, lots dans l'ordre : déblocages avant, tests unitaires à chaque lot, tests globaux pour clôturer. Phases clôturées rangées dans un chapitre à part. | B |
 | `adviser-dev` | Le tech lead : audit du socle d'un projet existant, ou socle front et back depuis le `plan.md`. Tests, CI, Docker, livraison. Sur appel seulement (`/adviser-dev`). | B+ |
 
 ### `construire-l-interface/` — le front

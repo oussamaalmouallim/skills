@@ -63,7 +63,7 @@
           "nom": "plan-par-lots",
           "dossier": "piloter-les-projets/plan-par-lots/",
           "maturite": "B",
-          "sert_a": "Le plan de travail en phases et en lots, dans un fichier Markdown à structure fixe. Mis à jour à la fin de chaque lot : c'est la source de vérité du chantier."
+          "sert_a": "Le plan de travail en phases et en lots, dans un fichier Markdown à structure fixe. Exécuté phase par phase, lots dans l'ordre, tests à chaque lot et tests globaux pour clôturer. Phases clôturées rangées à part."
         },
         {
           "nom": "adviser-dev",

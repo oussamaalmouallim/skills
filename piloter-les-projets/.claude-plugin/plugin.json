@@ -1,6 +1,6 @@
 {
   "name": "piloter-les-projets",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Piloter les projets : la map d'avancement dans la réponse ou en fichiers, le plan par lots, et le tech lead /adviser-dev.",
   "author": {
     "name": "StackLLM"

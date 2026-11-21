@@ -2,6 +2,11 @@
 
 Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) · versions : [SemVer](https://semver.org/lang/fr/). Le détail de chaque Skill est dans son propre `CHANGELOG.md`.
 
+## [0.8.1] — 2026-11-21
+
+### Modifié
+- **Plan par lots** (plugin `piloter-les-projets` 0.2.0) : méthode d'exécution phase par phase. Lots et sous-lots dans l'ordre strict, analyse et déblocages avant chaque phase, tests unitaires à chaque lot, tests globaux pour clôturer la phase. Dès qu'une phase est clôturée, le plan se coupe en deux chapitres : phases non clôturées, puis phases clôturées.
+
 ## [0.8.0] — 2026-11-17
 
 ### Modifié
